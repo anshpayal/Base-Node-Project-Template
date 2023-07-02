@@ -104,4 +104,4 @@ $ npm install --save oracledb # Oracle Database
 
 - If you're setting up test or prod environment, make sure you also replace the host with the hosted db url. 
 
-[Click here to know more about working with database](src\working_with_database.md)
+[Click here to know more about working with database](working_with_database.md)
