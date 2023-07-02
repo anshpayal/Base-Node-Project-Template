@@ -103,4 +103,3 @@ $ npm install --save oracledb # Oracle Database
 - If you're setting up your development environment, then write the username of your db, password of your db and in dialect mention whatever db you are using for ex: mysql, mariadb etc.
 
 - If you're setting up test or prod environment, make sure you also replace the host with the hosted db url. 
- 
