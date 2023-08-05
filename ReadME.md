@@ -98,9 +98,11 @@ $ npm install --save oracledb # Oracle Database
     ```
     Now instead of using `npx nodemon src/index.js` we can use `npm run dev`.
 
-   ```
 - Now to work with Database we are using ORM which is sequelize, sequelize is ORM for any time of relational Database, to install sequelize run the command `npm install sequelize`.
-- There are many relational Databases like mysql, mariadb, sqlite and many more. Whatever database we are use it needs a driver to make connection with ORM layer to the actual database layer. So we are using mysql2 driver, to install this driver run command `npm install mysql2`. 
+  
+- There are many relational Databases like mysql, mariadb, sqlite and many more. Whatever database we are use it needs a driver to make connection with ORM layer to the actual database layer. So we are using mysql2 driver, to install this driver run command `npm install mysql2`.
+  
+- To make things more simple for working with the database, we have to install `npm install sequelize-cli`. 
 
 - Go inside `src` folder -> run command on terminal `npx sequelize init` -> This command add `config.json` file inside config folder , it will make `models`, `migrations` and `seeders` folder. 
 
