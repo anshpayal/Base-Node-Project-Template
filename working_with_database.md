@@ -9,6 +9,30 @@ Here are some steps to work with mysql shell:
 
 
 ### Working with Database:
+
+- Now to work with Database we are using ORM which is sequelize, sequelize is ORM for any type of relational Database, to install sequelize run the command `npm install sequelize`.
+  
+- There are many relational Databases like mysql, mariadb, sqlite and many more. Whatever database we use it needs a driver to make the connection with the ORM layer to the actual database layer. So we are using mysql2 driver, to install this driver run the command `npm install mysql2`.
+  
+- To make things more simple for working with the database, we have to install sequelize-cli `npm install sequelize-cli`. 
+
+- Go inside `src` folder -> run command on terminal `npx sequelize init` -> This command add `config.json` file inside config folder , it will make `models`, `migrations` and `seeders` folder.
+
+- Inside `config.json` there are configurations related to the database connection for different environments (development, test, and production). Using different environments helps ensure that the development process is systematic, safe, and efficient. It reduces the chance of introducing errors and bugs into the production system.
+    ```
+     {
+      "development": {
+        "username": "root",
+        "password": null, //password which you have set up for mysql
+        "database": "database_development", //name of database 
+        "host": "127.0.0.1", //mention URL where we have hosted our DB, since we are developing so it is inside the local machine thats why the address is 127.0.0.1, it will assume the default PORT as mysql port until you change the port no need to add it. 
+        "dialect": "mysql" //automatically detects the DB to which we are connecting.   
+     }
+    ``` 
+
+- If you're setting up your development environment, then write the username of your db, password of your db and in dialect mention whatever db you are using for ex: mysql, mariadb etc.
+
+- If you're setting up test or prod environment, make sure you also replace the host with the hosted db url. 
 - Run command `npx sequelize db:create` inside src directory -> it will load configuration from config.json file , it uses by default development enviroment and create flights database (because in config.json file we have given database name as flights). 
 
 - Every table is treated as a model. So, if we want to create a table then we have create the model.
